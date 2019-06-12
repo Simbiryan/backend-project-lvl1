@@ -18,12 +18,15 @@
     "url": "https://github.com/Simbiryan/backend-project-lvl1/issues"
   },
   "homepage": "https://github.com/Simbiryan/backend-project-lvl1#readme",
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
-    "@babel/preset-env": "^7.4.5"
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "^5.16.0"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
