@@ -28,6 +28,7 @@ export const startQUIZ = () => {
       console.log('Correct!');
       if (counter === 3) console.log(`Congratulations, ${userName}!`);
     } else {
+      console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${userName}!`);
       break;
     }
   }
