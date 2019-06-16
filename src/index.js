@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import {
-  sayWelcome, getUserNameSayHello, sayWrong, getNOD, getRandomNumber,
+  sayWelcome, getUserNameSayHello, sayWrong, getRandomNumber,
 } from './utils/utils';
 
 export const brainEven = () => {
@@ -63,6 +63,11 @@ export const brainCalc = () => {
 
 export const brainGcd = () => {
   sayWelcome('Find the greatest common divisor of given numbers.');
+  const getNOD = (x, y) => {
+    if (y > x) return getNOD(y, x);
+    if (!y) return x;
+    return getNOD(y, x % y);
+  };
   const userName = getUserNameSayHello();
   for (let counter = 1; counter <= 3; counter += 1) {
     const randomNum1 = getRandomNumber(1, 47);
@@ -102,6 +107,38 @@ export const brainProgression = () => {
     console.log(`Question: ${questionStr}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (result === Number(userAnswer)) {
+      console.log('Correct!');
+      if (counter === 3) console.log(`Congratulations, ${userName}!`);
+    } else {
+      sayWrong(userName, userAnswer, result);
+      break;
+    }
+  }
+};
+
+export const brainPrime = () => {
+  sayWelcome('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const userName = getUserNameSayHello();
+  const isPrime = (n) => {
+    if (n === 2) {
+      return 'yes';
+    }
+    let i = 2;
+    const limit = Math.sqrt(n);
+    while (i <= limit) {
+      if (n % i === 0) {
+        return 'no';
+      }
+      i += 1;
+    }
+    return 'yes';
+  };
+  for (let counter = 1; counter <= 3; counter += 1) {
+    const randomNumber = getRandomNumber(2, 50);
+    const result = isPrime(randomNumber);
+    console.log(`Question: ${randomNumber}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (result === userAnswer) {
       console.log('Correct!');
       if (counter === 3) console.log(`Congratulations, ${userName}!`);
     } else {

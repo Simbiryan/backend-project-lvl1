@@ -9,13 +9,7 @@ export const getUserNameSayHello = () => {
 };
 
 export const sayWrong = (userName, userAnswer, result) => {
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
 };
 
 export const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min)) + min;
-
-export const getNOD = (x, y) => {
-  if (y > x) return getNOD(y, x);
-  if (!y) return x;
-  return getNOD(y, x % y);
-};
