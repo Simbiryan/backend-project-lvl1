@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 import {
-  startGameEven, sayWelcome, startQUIZ,
+  sayWelcome, brainEven,
 } from '..';
 
-sayWelcome();
-startGameEven();
-startQUIZ();
+sayWelcome('Answer "yes" if number even otherwise answer "no".');
+brainEven();
