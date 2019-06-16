@@ -79,3 +79,34 @@ export const brainGcd = () => {
     }
   }
 };
+
+export const brainProgression = () => {
+  sayWelcome('What number is missing in the progression?');
+  const userName = getUserNameSayHello();
+
+  const makeProgressionWithHidden = (str, begin, difference, countNumbers, indexOfHidenNumber) => {
+    if (countNumbers === 0) return `${str} `;
+    if (indexOfHidenNumber === countNumbers) {
+      return makeProgressionWithHidden(`${str} .. `, begin + difference, difference,
+        countNumbers - 1, indexOfHidenNumber);
+    }
+    return makeProgressionWithHidden(`${str} ${begin}`, begin + difference, difference,
+      countNumbers - 1, indexOfHidenNumber);
+  };
+  for (let counter = 1; counter <= 3; counter += 1) {
+    const beginNumber = getRandomNumber(1, 10);
+    const differenceNumber = getRandomNumber(1, 3);
+    const indexOfHidenNumber = getRandomNumber(1, 10);
+    const result = beginNumber + ((10 - indexOfHidenNumber) * differenceNumber);
+    const questionStr = makeProgressionWithHidden('', beginNumber, differenceNumber, 10, indexOfHidenNumber);
+    console.log(`Question: ${questionStr}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (result === Number(userAnswer)) {
+      console.log('Correct!');
+      if (counter === 3) console.log(`Congratulations, ${userName}!`);
+    } else {
+      sayWrong(userName, userAnswer, result);
+      break;
+    }
+  }
+};
