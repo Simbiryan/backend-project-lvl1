@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import {
-  sayWelcome, sayHello,
-} from '..';
+import { sayWelcome } from '../utils/utils';
 
 sayWelcome();
-sayHello();
