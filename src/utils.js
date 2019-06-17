@@ -12,4 +12,8 @@ export const sayWrong = (userName, userAnswer, result) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
 };
 
+export const sayRight = () => console.log('Correct!');
+
+export const sayCongra = userName => console.log(`Congratulations, ${userName}!`);
+
 export const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min)) + min;
