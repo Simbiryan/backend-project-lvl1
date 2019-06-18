@@ -1,8 +1,8 @@
 import engine from '../engine';
-import { getRandomNumber } from '../utils';
+import getRandomNumber from '../utils';
 
 const brainProgression = () => {
-  const rules = 'What number is missing in the progression?';
+  const description = 'What number is missing in the progression?';
 
   let beginNumber;
   let differenceNumber;
@@ -29,6 +29,6 @@ const brainProgression = () => {
     const rightAnswer = String(beginNumber + ((10 - indexOfHidenNumber) * differenceNumber));
     return rightAnswer;
   };
-  engine(rules, makeQuestionGetAnswer, makeQuestionGetAnswer);
+  engine(description, makeQuestionGetAnswer, makeQuestionGetAnswer);
 };
 export default brainProgression;

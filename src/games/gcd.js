@@ -1,16 +1,16 @@
 import engine from '../engine';
-import { getRandomNumber } from '../utils';
+import getRandomNumber from '../utils';
 
 const brainGcd = () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
+  const description = 'Find the greatest common divisor of given numbers.';
 
   let randomNum1;
   let randomNum2;
 
-  const getNOD = (x, y) => {
-    if (y > x) return getNOD(y, x);
+  const getNod = (x, y) => {
+    if (y > x) return getNod(y, x);
     if (!y) return x;
-    return getNOD(y, x % y);
+    return getNod(y, x % y);
   };
 
   const makeQuestionGetAnswer = (selector) => {
@@ -19,9 +19,9 @@ const brainGcd = () => {
       randomNum2 = getRandomNumber(1, 10);
       return `${randomNum1} ${randomNum2}`;
     }
-    const rightAnswer = String(getNOD(randomNum1, randomNum2));
+    const rightAnswer = String(getNod(randomNum1, randomNum2));
     return rightAnswer;
   };
-  engine(rules, makeQuestionGetAnswer, makeQuestionGetAnswer);
+  engine(description, makeQuestionGetAnswer, makeQuestionGetAnswer);
 };
 export default brainGcd;
