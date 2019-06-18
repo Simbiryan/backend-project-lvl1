@@ -3,17 +3,21 @@ install:
 
 publish:
 	        npm publish --dry-run
+
 lint:
 	        npx eslint .
-start1:
-					npx babel-node src/bin/brain-games.js
-start2:
+
+startEven:
 					npx babel-node src/bin/brain-even.js
-start3:
+
+startCalc:
 					npx babel-node src/bin/brain-calc.js
-start4:
+
+startGcd:
 					npx babel-node src/bin/brain-gcd.js
-start5:
+
+startProgression:
 					npx babel-node src/bin/brain-progression.js
-start6:
+					
+startPrime:
 					npx babel-node src/bin/brain-prime.js
