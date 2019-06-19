@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Simbiryan/backend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Alex Saveliev",
   "license": "ISC",
   "keywords": [
     "hexlet",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Simbiryan/backend-project-lvl1#readme",
   "dependencies": {
+    "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {

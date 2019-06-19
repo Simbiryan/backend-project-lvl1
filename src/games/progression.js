@@ -1,34 +1,25 @@
+import { cons } from 'hexlet-pairs';
 import engine from '../engine';
-import getRandomNumber from '../utils';
+import getRandomNum from '../utils';
 
-const brainProgression = () => {
-  const description = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
+const lenghtProgression = 10;
 
-  let beginNumber;
-  let differenceNumber;
-  let indexOfHidenNumber;
-
-  const makeProgressionWithHidden = (str, begin, difference, countNumbers, index) => {
-    if (countNumbers === 0) return `${str} `;
-    if (index === countNumbers) {
-      return makeProgressionWithHidden(`${str} .. `, begin + difference, difference,
-        countNumbers - 1, index);
-    }
-    return makeProgressionWithHidden(`${str} ${begin}`, begin + difference, difference,
+const makeProgressionWithHidden = (str, begin, difference, countNumbers, index) => {
+  if (countNumbers === 0) return `${str} `;
+  if (index === countNumbers) {
+    return makeProgressionWithHidden(`${str} .. `, begin + difference, difference,
       countNumbers - 1, index);
-  };
-
-  const makeQuestionGetAnswer = (selector) => {
-    const countNumbers = 10;
-    if (selector === undefined) {
-      beginNumber = getRandomNumber(1, 10);
-      differenceNumber = getRandomNumber(1, 3);
-      indexOfHidenNumber = getRandomNumber(1, 10);
-      return makeProgressionWithHidden('', beginNumber, differenceNumber, countNumbers, indexOfHidenNumber);
-    }
-    const rightAnswer = String(beginNumber + ((10 - indexOfHidenNumber) * differenceNumber));
-    return rightAnswer;
-  };
-  engine(description, makeQuestionGetAnswer, makeQuestionGetAnswer);
+  }
+  return makeProgressionWithHidden(`${str} ${begin}`, begin + difference, difference,
+    countNumbers - 1, index);
 };
-export default brainProgression;
+
+const gameData = () => {
+  const begin = getRandomNum(1, 10);
+  const difference = getRandomNum(1, 3);
+  const indexOfHiden = getRandomNum(1, lenghtProgression);
+  return cons(makeProgressionWithHidden('', begin, difference, lenghtProgression, indexOfHiden),
+    `${(begin + ((lenghtProgression - indexOfHiden) * difference))}`);
+};
+export default () => engine(description, gameData);

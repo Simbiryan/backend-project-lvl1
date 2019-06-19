@@ -1,27 +1,19 @@
+import { cons } from 'hexlet-pairs';
 import engine from '../engine';
-import getRandomNumber from '../utils';
+import getRandomNum from '../utils';
 
-const brainGcd = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-
-  let randomNum1;
-  let randomNum2;
-
-  const getNod = (x, y) => {
-    if (y > x) return getNod(y, x);
-    if (!y) return x;
-    return getNod(y, x % y);
-  };
-
-  const makeQuestionGetAnswer = (selector) => {
-    if (selector === undefined) {
-      randomNum1 = getRandomNumber(1, 10);
-      randomNum2 = getRandomNumber(1, 10);
-      return `${randomNum1} ${randomNum2}`;
-    }
-    const rightAnswer = String(getNod(randomNum1, randomNum2));
-    return rightAnswer;
-  };
-  engine(description, makeQuestionGetAnswer, makeQuestionGetAnswer);
+const description = 'Find the greatest common divisor of given numbers.';
+const getGsd = (x, y) => {
+  if (y > x) return getGsd(y, x);
+  if (!y) return x;
+  return getGsd(y, x % y);
 };
-export default brainGcd;
+
+const gameData = () => {
+  const randomNum1 = getRandomNum(1, 50);
+  const randomNum2 = getRandomNum(1, 50);
+  const question = `${randomNum1} ${randomNum2}`;
+  const rightAnswer = `${getGsd(randomNum1, randomNum2)}`;
+  return cons(question, rightAnswer);
+};
+export default () => engine(description, gameData);
