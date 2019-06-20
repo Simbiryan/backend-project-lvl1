@@ -1,13 +1,13 @@
 # Brain-games (backend-project-lvl1)
+<a href="https://codeclimate.com/github/Simbiryan/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/f58c7286d987eed17631/maintainability" /></a>
+<a href="https://travis-ci.com/Simbiryan/backend-project-lvl1"><img src="https://travis-ci.com/Simbiryan/backend-project-lvl1.svg?branch=master" /></a>
+
 Small math games launched in the console:
 - brain even
 - brain greatest common deliver
 - brain prime
 - brain calc
 - brain progression
-
-<a href="https://codeclimate.com/github/Simbiryan/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/f58c7286d987eed17631/maintainability" /></a>
-<a href="https://travis-ci.com/Simbiryan/backend-project-lvl1"><img src="https://travis-ci.com/Simbiryan/backend-project-lvl1.svg?branch=master" /></a>
 
 ### Setup
 `sudo npm link`
