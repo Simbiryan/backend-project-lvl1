@@ -33,9 +33,20 @@ What is the result of the expression?
 
 <a href="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m" target="_blank"><img src="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m.svg" /></a>
 
+### Brain calc
+
+What is the result of the expression?
 
 <a href="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg" target="_blank"><img src="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg.svg" /></a>
 
+### Brain calc
+
+What is the result of the expression?
+
 <a href="https://asciinema.org/a/kBD28GeKDulWP4KbK3MXWY6GS" target="_blank"><img src="https://asciinema.org/a/kBD28GeKDulWP4KbK3MXWY6GS.svg" /></a>
+
+### Brain calc
+
+What is the result of the expression?
 
 <a href="https://asciinema.org/a/VvXre6KA4YOEVWKniNTn70wWo" target="_blank"><img src="https://asciinema.org/a/VvXre6KA4YOEVWKniNTn70wWo.svg" /></a>
