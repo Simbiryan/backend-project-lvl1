@@ -9,19 +9,22 @@ Small math games launched in the console:
 - brain calc
 - brain progression
 
-### Setup
+## Setup
 `sudo npm link`
 
-### Run game
+## Run game
 `brain-even`
 `brain-gcd`
 `brain-prime`
 `brain-calc`
 `brain-progression`
 
-### Description
+## Description
+### Brain even
 
+"Answer 'yes' if number even otherwise answer 'no'.
 <a href="https://asciinema.org/a/nHvpGH7Kl5waLKAw3zL7Xl5Ue" target="_blank"><img src="https://asciinema.org/a/nHvpGH7Kl5waLKAw3zL7Xl5Ue.svg" /></a>
+
 
 <a href="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m" target="_blank"><img src="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m.svg" /></a>
 
