@@ -39,14 +39,14 @@ Find the greatest common divisor of given numbers.
 
 <a href="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg" target="_blank"><img src="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg.svg" /></a>
 
-### Brain calc
+### Brain progression
 
-What is the result of the expression?
+What number is missing in the progression?
 
 <a href="https://asciinema.org/a/kBD28GeKDulWP4KbK3MXWY6GS" target="_blank"><img src="https://asciinema.org/a/kBD28GeKDulWP4KbK3MXWY6GS.svg" /></a>
 
-### Brain calc
+### Brain prime
 
-What is the result of the expression?
+Answer "yes" if given number is prime. Otherwise answer "no"
 
 <a href="https://asciinema.org/a/VvXre6KA4YOEVWKniNTn70wWo" target="_blank"><img src="https://asciinema.org/a/VvXre6KA4YOEVWKniNTn70wWo.svg" /></a>
