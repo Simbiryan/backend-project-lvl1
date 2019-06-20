@@ -23,6 +23,7 @@ Small math games launched in the console:
 ### Brain even
 
 "Answer 'yes' if number even otherwise answer 'no'.
+
 <a href="https://asciinema.org/a/nHvpGH7Kl5waLKAw3zL7Xl5Ue" target="_blank"><img src="https://asciinema.org/a/nHvpGH7Kl5waLKAw3zL7Xl5Ue.svg" /></a>
 
 
