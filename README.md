@@ -23,30 +23,30 @@ Small math games launched in the console:
 
 ### Brain even
 
-"Answer 'yes' if number even otherwise answer 'no'.
+*"Answer 'yes' if number even otherwise answer 'no'.*
 
 <a href="https://asciinema.org/a/nHvpGH7Kl5waLKAw3zL7Xl5Ue" target="_blank"><img src="https://asciinema.org/a/nHvpGH7Kl5waLKAw3zL7Xl5Ue.svg" /></a>
 
 ### Brain calc
 
-What is the result of the expression?
+*What is the result of the expression?*
 
 <a href="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m" target="_blank"><img src="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m.svg" /></a>
 
 ### Brain gcd
 
-Find the greatest common divisor of given numbers.
+*Find the greatest common divisor of given numbers.*
 
 <a href="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg" target="_blank"><img src="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg.svg" /></a>
 
 ### Brain progression
 
-What number is missing in the progression?
+*What number is missing in the progression?*
 
 <a href="https://asciinema.org/a/kBD28GeKDulWP4KbK3MXWY6GS" target="_blank"><img src="https://asciinema.org/a/kBD28GeKDulWP4KbK3MXWY6GS.svg" /></a>
 
 ### Brain prime
 
-Answer "yes" if given number is prime. Otherwise answer "no"
+*Answer "yes" if given number is prime. Otherwise answer "no".*
 
 <a href="https://asciinema.org/a/VvXre6KA4YOEVWKniNTn70wWo" target="_blank"><img src="https://asciinema.org/a/VvXre6KA4YOEVWKniNTn70wWo.svg" /></a>
