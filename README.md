@@ -33,9 +33,9 @@ What is the result of the expression?
 
 <a href="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m" target="_blank"><img src="https://asciinema.org/a/qubeNrvZ8Ya9E8OgoC7pepU8m.svg" /></a>
 
-### Brain calc
+### Brain gcd
 
-What is the result of the expression?
+Find the greatest common divisor of given numbers.
 
 <a href="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg" target="_blank"><img src="https://asciinema.org/a/QLFnuTxTWK0arsRbmKM0Htykg.svg" /></a>
 
