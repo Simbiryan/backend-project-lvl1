@@ -1,19 +1,19 @@
 import { cons } from 'hexlet-pairs';
 import engine from '../engine';
-import getRandomNum from '../utils';
+import getRandom from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
-const getGsd = (x, y) => {
-  if (y > x) return getGsd(y, x);
+const getGcd = (x, y) => {
+  if (y > x) return getGcd(y, x);
   if (!y) return x;
-  return getGsd(y, x % y);
+  return getGcd(y, x % y);
 };
 
-const gameData = () => {
-  const randomNum1 = getRandomNum(1, 50);
-  const randomNum2 = getRandomNum(1, 50);
-  const question = `${randomNum1} ${randomNum2}`;
-  const rightAnswer = `${getGsd(randomNum1, randomNum2)}`;
+const createGameData = () => {
+  const random1 = getRandom(1, 50);
+  const random2 = getRandom(1, 50);
+  const question = `${random1} ${random2}`;
+  const rightAnswer = `${getGcd(random1, random2)}`;
   return cons(question, rightAnswer);
 };
-export default () => engine(description, gameData);
+export default () => engine(description, createGameData);

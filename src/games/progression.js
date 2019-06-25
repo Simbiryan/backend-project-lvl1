@@ -1,25 +1,25 @@
 import { cons } from 'hexlet-pairs';
 import engine from '../engine';
-import getRandomNum from '../utils';
+import getRandom from '../utils';
 
 const description = 'What number is missing in the progression?';
 const lenghtProgression = 10;
 
-const makeProgressionWithHidden = (str, begin, difference, countNumbers, index) => {
-  if (countNumbers === 0) return `${str} `;
-  if (index === countNumbers) {
-    return makeProgressionWithHidden(`${str} .. `, begin + difference, difference,
-      countNumbers - 1, index);
+
+const createProgression = (begin, step, length, hidden) => {
+  if (length === 0) return '';
+  if (hidden === length) {
+    return `.. ${createProgression(begin + step, step, length - 1, hidden)}`;
   }
-  return makeProgressionWithHidden(`${str} ${begin}`, begin + difference, difference,
-    countNumbers - 1, index);
+  return `${begin} ${createProgression(begin + step, step, length - 1, hidden)}`;
 };
 
-const gameData = () => {
-  const begin = getRandomNum(1, 10);
-  const difference = getRandomNum(1, 3);
-  const indexOfHiden = getRandomNum(1, lenghtProgression);
-  return cons(makeProgressionWithHidden('', begin, difference, lenghtProgression, indexOfHiden),
-    `${(begin + ((lenghtProgression - indexOfHiden) * difference))}`);
+const createGameData = () => {
+  const begin = getRandom(1, 10);
+  const step = getRandom(1, 3);
+  const hidden = getRandom(1, lenghtProgression);
+  return cons(createProgression(begin, step, lenghtProgression, hidden),
+    `${(begin + ((lenghtProgression - hidden) * step))}`);
 };
-export default () => engine(description, gameData);
+
+export default () => engine(description, createGameData);

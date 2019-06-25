@@ -1,23 +1,24 @@
 import { cons } from 'hexlet-pairs';
 import engine from '../engine';
-import getRandomNum from '../utils';
+import getRandom from '../utils';
 
 const description = 'What is the result of the expression?';
+const operators = '+-*';
 
-const gameData = () => {
-  const randomNum1 = getRandomNum(0, 9);
-  const randomNum2 = getRandomNum(0, 9);
-  const operator = getRandomNum(1, 3);
-  switch (operator) {
-    case 1: {
-      return cons(`${randomNum1} + ${randomNum2}`, `${randomNum1 + randomNum2}`);
+const createGameData = () => {
+  const random1 = getRandom(0, 9);
+  const random2 = getRandom(0, 9);
+  const random = getRandom(0, operators.length - 1);
+  switch (random) {
+    case 0: {
+      return cons(`${random1} ${operators[random]} ${random2}`, `${random1 + random2}`);
     }
-    case 2: {
-      return cons(`${randomNum1} - ${randomNum2}`, `${randomNum1 - randomNum2}`);
+    case 1: {
+      return cons(`${random1} ${operators[random]} ${random2}`, `${random1 - random2}`);
     }
     default: {
-      return cons(`${randomNum1} * ${randomNum2}`, `${randomNum1 * randomNum2}`);
+      return cons(`${random1} ${operators[random]} ${random2}`, `${random1 * random2}`);
     }
   }
 };
-export default () => engine(description, gameData);
+export default () => engine(description, createGameData);

@@ -2,11 +2,11 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
 const countOfQuestion = 3;
-const welcome = 'Welcome to the Brain Games! \n';
+const greeting = 'Welcome to the Brain Games!';
 
 export default (description, getGameData) => {
-  console.log(welcome);
-  console.log(`${description}  \n`);
+  console.log(`${greeting}`);
+  console.log(`${description}\n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
@@ -17,14 +17,14 @@ export default (description, getGameData) => {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (rightAnswer === userAnswer) {
-      console.log('Correct!');
-      if (counter === countOfQuestion) {
-        console.log(`Congratulations, ${userName}!`);
-      }
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
-      break;
+    if (rightAnswer !== userAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\n`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
+    console.log('Correct!');
+    if (counter === countOfQuestion) {
+      console.log(`Congratulations, ${userName}!`);
     }
   }
 };
