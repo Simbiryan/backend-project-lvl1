@@ -10,7 +10,7 @@ export default (description, getGameData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
-  for (let counter = 1; counter <= countOfQuestion; counter += 1) {
+  for (let i = 1; i <= countOfQuestion; i += 1) {
     const gameData = getGameData();
     const question = car(gameData);
     const rightAnswer = cdr(gameData);
@@ -23,7 +23,7 @@ export default (description, getGameData) => {
       return;
     }
     console.log('Correct!');
-    if (counter === countOfQuestion) {
+    if (i === countOfQuestion) {
       console.log(`Congratulations, ${userName}!`);
     }
   }
