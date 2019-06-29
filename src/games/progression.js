@@ -7,14 +7,14 @@ const lenghtProgression = 10;
 
 const createQuestion = (begin, step, length, hiddenElementIndex) => {
   let question = '';
-  let newElement = begin;
-  for (let i = 0; i <= length; i += 1) {
+  let newElement;
+  for (let i = 0; i < length; i += 1) {
     if (i !== hiddenElementIndex) {
-      question = `${question} ${newElement}`;
+      newElement = begin + step * i;
     } else {
-      question = `${question} .. `;
+      newElement = '..';
     }
-    newElement += step;
+    question = i === 0 ? `${question}${newElement}` : `${question} ${newElement}`;
   }
   return question;
 };
@@ -22,7 +22,7 @@ const createQuestion = (begin, step, length, hiddenElementIndex) => {
 const createGameData = () => {
   const begin = getRandom(1, 10);
   const step = getRandom(1, 3);
-  const hiddenElementIndex = getRandom(1, lenghtProgression);
+  const hiddenElementIndex = getRandom(0, lenghtProgression - 1);
   const question = createQuestion(begin, step, lenghtProgression, hiddenElementIndex);
   const rightAnswer = `${begin + hiddenElementIndex * step}`;
   return cons(question, rightAnswer);
