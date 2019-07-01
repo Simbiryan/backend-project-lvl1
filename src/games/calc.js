@@ -8,10 +8,10 @@ const operators = '+-*';
 const createGameData = () => {
   const random1 = getRandom(0, 9);
   const random2 = getRandom(0, 9);
-  const random = operators[getRandom(0, operators.length - 1)];
-  const question = `${random1} ${random} ${random2}`;
+  const operator = operators[getRandom(0, operators.length - 1)];
+  const question = `${random1} ${operator} ${random2}`;
   let rightAnswer;
-  switch (random) {
+  switch (operator) {
     case '+': {
       rightAnswer = `${random1 + random2}`;
       break;
