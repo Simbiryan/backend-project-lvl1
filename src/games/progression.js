@@ -10,9 +10,9 @@ const createQuestion = (begin, step, length, hiddenElementIndex) => {
   let newElement;
   for (let i = 0; i < length; i += 1) {
     newElement = i !== hiddenElementIndex ? begin + step * i : '..';
-    question = `${question} ${newElement}`.trim();
+    question = `${question} ${newElement}`;
   }
-  return question;
+  return question.trim();
 };
 
 const createGameData = () => {
